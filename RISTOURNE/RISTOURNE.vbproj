@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAF9D657-D71D-4B05-9665-C1177835D70D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RISTOURNE.My.MyApplication</StartupObject>
+    <RootNamespace>RISTOURNE</RootNamespace>
+    <AssemblyName>RISTOURNE</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RISTOURNE.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RISTOURNE.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClassFile.vb" />
+    <Compile Include="Classes\ClassMembre.vb" />
+    <Compile Include="Classes\connectCls.vb" />
+    <Compile Include="Classes\CreerDossier.vb" />
+    <Compile Include="Classes\MdlDatabase.vb" />
+    <Compile Include="Etats\Engagement.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Engagement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Etats\Fiche_Suivi.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fiche_Suivi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Etats\Reconnaissance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reconnaissance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Etats\Recu_Cotisation.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recu_Cotisation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Etats\Suivi_Remboursement.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Suivi_Remboursement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formulaires\Impression.Designer.vb">
+      <DependentUpon>Impression.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\Impression.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\Parametre.Designer.vb">
+      <DependentUpon>Parametre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\Parametre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\ProgressBar.Designer.vb">
+      <DependentUpon>ProgressBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\ProgressBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\User.Designer.vb">
+      <DependentUpon>User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControle\BackUp.Designer.vb">
+      <DependentUpon>BackUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControle\BackUp.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControle\Remboursement.Designer.vb">
+      <DependentUpon>Remboursement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControle\Remboursement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControle\Cotisation.Designer.vb">
+      <DependentUpon>Cotisation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControle\Cotisation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulaires\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControle\Membre.Designer.vb">
+      <DependentUpon>Membre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControle\Membre.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControle\Tirage.Designer.vb">
+      <DependentUpon>Tirage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControle\Tirage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Etats\Engagement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Engagement.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etats\Fiche_Suivi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Fiche_Suivi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etats\Reconnaissance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reconnaissance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etats\Recu_Cotisation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Recu_Cotisation.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etats\Suivi_Remboursement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Suivi_Remboursement.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\Impression.resx">
+      <DependentUpon>Impression.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\Parametre.resx">
+      <DependentUpon>Parametre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\ProgressBar.resx">
+      <DependentUpon>ProgressBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\User.resx">
+      <DependentUpon>User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControle\BackUp.resx">
+      <DependentUpon>BackUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControle\Cotisation.resx">
+      <DependentUpon>Cotisation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\Form1.fr-FR.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControle\Membre.resx">
+      <DependentUpon>Membre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControle\Remboursement.resx">
+      <DependentUpon>Remboursement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControle\Tirage.resx">
+      <DependentUpon>Tirage.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reduire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agrandir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajouter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajouter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cotisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tirage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cotisa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parametre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO DAVID.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CTB LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CTB LOGO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_2018-06-14-20-20-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20180614_124027.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
