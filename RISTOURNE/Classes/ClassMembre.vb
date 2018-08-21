@@ -306,12 +306,38 @@ Public Class ClassMembre
             getCon.con.Open()
             insert = New SqlCommand
             insert.Connection = getCon.con
-            insert.CommandText = "select nomMbr FROM Membre where codeMbr='" + cmb + "'"
+            insert.CommandText = "select codeMbr FROM Membre where nomMbr='" + cmb + "'"
             Dim dr As SqlDataReader
             dr = insert.ExecuteReader
             While (dr.Read())
 
-                identite = dr("nomMbr").ToString
+                identite = dr("codeMbr").ToString
+
+            End While
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            getCon.con.Close()
+        End Try
+
+    End Sub
+    Public Sub Chargement_VerificationCotisation(ByRef cmb As String, ByRef code As String, ByRef montant As String, ByRef fonction As String, ByRef dateCo As String, ByRef amende As String)
+        Try
+            getCon.con.Open()
+            insert = New SqlCommand
+            insert.Connection = getCon.con
+            insert.CommandText = "select code_cotisation, Montant, Fonction, Date_de_Cotisation, Amende FROM Cotisation where codeMbr='" + cmb + "' ORDER BY code_cotisation DESC OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY"
+            Dim dr As SqlDataReader
+            dr = insert.ExecuteReader
+            While (dr.Read())
+
+                code = dr("code_cotisation").ToString
+                montant = dr("Montant").ToString
+                fonction = dr("Fonction").ToString
+                dateCo = dr("Date_de_Cotisation").ToString
+                amende = dr("Amende").ToString
+
             End While
 
         Catch ex As Exception

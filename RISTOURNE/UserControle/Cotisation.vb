@@ -12,7 +12,7 @@
         'Else
         '    suiviBtn.Enabled = True
         'End If
-        membre.chargement_combo("codeMbr", "Membre", matCombo)
+        membre.chargement_combo("nomMbr", "Membre", matCombo)
         membre.clientList(dgCotisation, "Cotisation")
     End Sub
 
@@ -55,12 +55,12 @@
         Try
             Dim etat As New Impression
             If arriereTxt.Text = "" Then
-                membre.insererCotisation(matCombo.Text, montantTxt.Text, fonctionTxt.Text, dateTxt.Text)
-                etat.Sortie_Recu(matCombo.Text)
+                membre.insererCotisation(identiteTxt.Text, montantTxt.Text, fonctionTxt.Text, dateTxt.Text)
+                etat.Sortie_Recu(identiteTxt.Text)
                 etat.ShowDialog()
             Else
-                membre.insererCotisation2(matCombo.Text, montantTxt.Text, fonctionTxt.Text, dateTxt.Text, arriereTxt.Text)
-                etat.Sortie_Recu(matCombo.Text)
+                membre.insererCotisation2(identiteTxt.Text, montantTxt.Text, fonctionTxt.Text, dateTxt.Text, arriereTxt.Text)
+                etat.Sortie_Recu(identiteTxt.Text)
                 etat.ShowDialog()
             End If
 
@@ -78,7 +78,7 @@
             If matCombo.Text = "" Then
                 MsgBox("Choisisez un matricule avant de cliqué ici")
             Else
-                etat.Sortie_FicheSuivi(matCombo.Text)
+                etat.Sortie_FicheSuivi(identiteTxt.Text)
                 etat.ShowDialog()
             End If
         Catch ex As Exception
@@ -88,5 +88,9 @@
 
     Private Sub TextBox1_TextChanged_1(sender As Object, e As EventArgs) Handles searchTxt.TextChanged
         membre.searchCotisation(dgCotisation, searchTxt.Text)
+    End Sub
+
+    Private Sub identiteTxt_TextChanged(sender As Object, e As EventArgs) Handles identiteTxt.TextChanged
+        membre.Chargement_VerificationCotisation(identiteTxt.Text, codeCo.Text, montantCo.Text, socialCo.Text, dateCo.Text, amendeCo.Text)
     End Sub
 End Class
