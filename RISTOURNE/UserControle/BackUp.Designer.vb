@@ -104,7 +104,7 @@ Partial Class BackUp
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(605, 88)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(623, 189)
+        Me.GroupBox2.Size = New System.Drawing.Size(611, 189)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Restauration"
@@ -147,9 +147,9 @@ Partial Class BackUp
         '
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(22, 297)
+        Me.GroupBox3.Location = New System.Drawing.Point(22, 283)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1206, 331)
+        Me.GroupBox3.Size = New System.Drawing.Size(1194, 333)
         Me.GroupBox3.TabIndex = 20
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Envoies des SMS"
