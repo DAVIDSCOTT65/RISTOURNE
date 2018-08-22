@@ -41,8 +41,6 @@ Partial Class Tirage
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.phoneTxt = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.photoPic = New System.Windows.Forms.PictureBox()
         Me.phone = New System.Windows.Forms.TextBox()
         Me.mandTxt = New System.Windows.Forms.TextBox()
         Me.membreTxt = New System.Windows.Forms.TextBox()
@@ -50,6 +48,8 @@ Partial Class Tirage
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.photoPic = New System.Windows.Forms.PictureBox()
         CType(Me.dgTirage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -73,9 +73,9 @@ Partial Class Tirage
         Me.matriculTxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.matriculTxt.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.matriculTxt.FormattingEnabled = True
-        Me.matriculTxt.Location = New System.Drawing.Point(117, 72)
+        Me.matriculTxt.Location = New System.Drawing.Point(117, 119)
         Me.matriculTxt.Name = "matriculTxt"
-        Me.matriculTxt.Size = New System.Drawing.Size(355, 32)
+        Me.matriculTxt.Size = New System.Drawing.Size(284, 32)
         Me.matriculTxt.TabIndex = 15
         '
         'Label2
@@ -83,7 +83,7 @@ Partial Class Tirage
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(18, 75)
+        Me.Label2.Location = New System.Drawing.Point(25, 122)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 24)
         Me.Label2.TabIndex = 14
@@ -94,7 +94,7 @@ Partial Class Tirage
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(62, 125)
+        Me.Label3.Location = New System.Drawing.Point(62, 76)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 24)
         Me.Label3.TabIndex = 16
@@ -104,9 +104,9 @@ Partial Class Tirage
         '
         Me.dateTxt.Enabled = False
         Me.dateTxt.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateTxt.Location = New System.Drawing.Point(117, 119)
+        Me.dateTxt.Location = New System.Drawing.Point(117, 73)
         Me.dateTxt.Name = "dateTxt"
-        Me.dateTxt.Size = New System.Drawing.Size(355, 30)
+        Me.dateTxt.Size = New System.Drawing.Size(284, 30)
         Me.dateTxt.TabIndex = 17
         '
         'dgTirage
@@ -160,7 +160,7 @@ Partial Class Tirage
         Me.numTxt.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
         Me.numTxt.Location = New System.Drawing.Point(117, 26)
         Me.numTxt.Name = "numTxt"
-        Me.numTxt.Size = New System.Drawing.Size(355, 32)
+        Me.numTxt.Size = New System.Drawing.Size(284, 32)
         Me.numTxt.TabIndex = 22
         '
         'Label4
@@ -186,7 +186,7 @@ Partial Class Tirage
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(9, 55)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(515, 244)
+        Me.GroupBox1.Size = New System.Drawing.Size(444, 176)
         Me.GroupBox1.TabIndex = 24
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tirage"
@@ -208,9 +208,9 @@ Partial Class Tirage
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(540, 55)
+        Me.GroupBox2.Location = New System.Drawing.Point(483, 55)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(675, 244)
+        Me.GroupBox2.Size = New System.Drawing.Size(732, 244)
         Me.GroupBox2.TabIndex = 25
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informations sur le Membre"
@@ -220,7 +220,7 @@ Partial Class Tirage
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(106, 177)
+        Me.Label11.Location = New System.Drawing.Point(106, 163)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 17)
         Me.Label11.TabIndex = 36
@@ -242,7 +242,7 @@ Partial Class Tirage
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(548, 11)
+        Me.Label9.Location = New System.Drawing.Point(616, 11)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(82, 18)
         Me.Label9.TabIndex = 34
@@ -253,7 +253,7 @@ Partial Class Tirage
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(387, 11)
+        Me.Label8.Location = New System.Drawing.Point(455, 11)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 18)
         Me.Label8.TabIndex = 33
@@ -263,32 +263,10 @@ Partial Class Tirage
         '
         Me.phoneTxt.Enabled = False
         Me.phoneTxt.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.phoneTxt.Location = New System.Drawing.Point(130, 169)
+        Me.phoneTxt.Location = New System.Drawing.Point(130, 155)
         Me.phoneTxt.Name = "phoneTxt"
         Me.phoneTxt.Size = New System.Drawing.Size(205, 30)
         Me.phoneTxt.TabIndex = 32
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox2.Image = Global.RISTOURNE.My.Resources.Resources.IMG_20180614_124027
-        Me.PictureBox2.Location = New System.Drawing.Point(515, 32)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(143, 192)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 31
-        Me.PictureBox2.TabStop = False
-        '
-        'photoPic
-        '
-        Me.photoPic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.photoPic.Image = Global.RISTOURNE.My.Resources.Resources.Capture1
-        Me.photoPic.Location = New System.Drawing.Point(347, 32)
-        Me.photoPic.Name = "photoPic"
-        Me.photoPic.Size = New System.Drawing.Size(143, 192)
-        Me.photoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.photoPic.TabIndex = 30
-        Me.photoPic.TabStop = False
         '
         'phone
         '
@@ -303,7 +281,7 @@ Partial Class Tirage
         '
         Me.mandTxt.Enabled = False
         Me.mandTxt.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mandTxt.Location = New System.Drawing.Point(130, 75)
+        Me.mandTxt.Location = New System.Drawing.Point(130, 65)
         Me.mandTxt.Name = "mandTxt"
         Me.mandTxt.Size = New System.Drawing.Size(205, 30)
         Me.mandTxt.TabIndex = 28
@@ -333,7 +311,7 @@ Partial Class Tirage
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(16, 75)
+        Me.Label6.Location = New System.Drawing.Point(25, 69)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 24)
         Me.Label6.TabIndex = 25
@@ -349,6 +327,28 @@ Partial Class Tirage
         Me.Label5.Size = New System.Drawing.Size(78, 24)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Membre"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Image = Global.RISTOURNE.My.Resources.Resources._5
+        Me.PictureBox2.Location = New System.Drawing.Point(583, 32)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(143, 192)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 31
+        Me.PictureBox2.TabStop = False
+        '
+        'photoPic
+        '
+        Me.photoPic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.photoPic.Image = Global.RISTOURNE.My.Resources.Resources._2_512
+        Me.photoPic.Location = New System.Drawing.Point(415, 32)
+        Me.photoPic.Name = "photoPic"
+        Me.photoPic.Size = New System.Drawing.Size(143, 192)
+        Me.photoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.photoPic.TabIndex = 30
+        Me.photoPic.TabStop = False
         '
         'Tirage
         '

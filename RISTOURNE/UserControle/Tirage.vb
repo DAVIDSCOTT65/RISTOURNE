@@ -8,13 +8,16 @@
             Dim add As Double
             da = Date.Today
             add = Double.Parse(numTxt.SelectedItem.ToString)
-            'If add = "1" Then
-            '    dateTxt.Text = Date.Now
+            If add = "1" Then
 
-            'Else
-            add = add * 7
+                dateTxt.Text = Date.Now
+
+            Else
+
+                add = (add * 7) - 7
                 dateTxt.Text = DateAdd("d", add, Date.Now)
-            'End If
+
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message)

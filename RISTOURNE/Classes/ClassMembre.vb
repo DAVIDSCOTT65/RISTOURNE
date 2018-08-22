@@ -347,7 +347,29 @@ Public Class ClassMembre
         End Try
 
     End Sub
-    Public Sub Chargement_FieldRemb(ByRef cmb As String, ByRef identite As String, ByRef mandataire As String, ByRef phone As String, ByRef phoneM As String)
+    Public Sub Chargement_Somme(ByRef cmb As String)
+        Try
+            getCon.con.Open()
+            insert = New SqlCommand
+            insert.Connection = getCon.con
+            insert.CommandText = "SELECT sum(Montant) as SOMME FROM Cotisation WHERE Date_de_Cotisation = cast(Convert(char(8), GETDATE(), 112) AS date)"
+            Dim dr As SqlDataReader
+            dr = insert.ExecuteReader
+            While (dr.Read())
+
+                cmb = dr("SOMME").ToString
+
+
+            End While
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            getCon.con.Close()
+        End Try
+
+    End Sub
+    Public Sub Chargement_FieldRemb(ByRef cmb As String, ByRef identite As String, ByRef mandataire As String)
         Try
             If (getCon.con.State.Equals("Opened")) Then
                 getCon.con.Close()
@@ -356,15 +378,14 @@ Public Class ClassMembre
             getCon.con.Open()
             insert = New SqlCommand
             insert.Connection = getCon.con
-            insert.CommandText = "select date_paiement, codeMbr,nomMbr, Montant FROM A_REMBOURSER where numTire='" + cmb + "'"
+            insert.CommandText = "select date_paiement, codeMbr FROM A_REMBOURSER where numTire='" + cmb + "'"
             Dim dr As SqlDataReader
             dr = insert.ExecuteReader
             While (dr.Read())
 
                 identite = dr("date_paiement").ToString
                 mandataire = dr("codeMbr").ToString
-                phone = dr("nomMbr").ToString
-                phoneM = dr("Montant").ToString
+
 
 
 

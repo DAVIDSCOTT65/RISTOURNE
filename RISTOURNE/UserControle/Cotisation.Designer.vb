@@ -28,7 +28,6 @@ Partial Class Cotisation
         Me.dgCotisation = New System.Windows.Forms.DataGridView()
         Me.searchTxt = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.suiviBtn = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -47,19 +46,20 @@ Partial Class Cotisation
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.suiviBtn = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.amendeCo = New System.Windows.Forms.Label()
+        Me.dateCo = New System.Windows.Forms.Label()
+        Me.socialCo = New System.Windows.Forms.Label()
+        Me.montantCo = New System.Windows.Forms.Label()
+        Me.codeCo = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.codeCo = New System.Windows.Forms.Label()
-        Me.montantCo = New System.Windows.Forms.Label()
-        Me.socialCo = New System.Windows.Forms.Label()
-        Me.dateCo = New System.Windows.Forms.Label()
-        Me.amendeCo = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.dgCotisation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -146,18 +146,6 @@ Partial Class Cotisation
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nouvelle cotisation"
         '
-        'suiviBtn
-        '
-        Me.suiviBtn.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.suiviBtn.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.suiviBtn.ForeColor = System.Drawing.Color.Black
-        Me.suiviBtn.Location = New System.Drawing.Point(200, 208)
-        Me.suiviBtn.Name = "suiviBtn"
-        Me.suiviBtn.Size = New System.Drawing.Size(198, 55)
-        Me.suiviBtn.TabIndex = 48
-        Me.suiviBtn.Text = "Fiche de suivi"
-        Me.suiviBtn.UseVisualStyleBackColor = False
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -214,7 +202,6 @@ Partial Class Cotisation
         '
         'dateTxt
         '
-        Me.dateTxt.Enabled = False
         Me.dateTxt.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateTxt.Location = New System.Drawing.Point(102, 144)
         Me.dateTxt.Name = "dateTxt"
@@ -285,7 +272,7 @@ Partial Class Cotisation
         Me.fonctionTxt.Name = "fonctionTxt"
         Me.fonctionTxt.Size = New System.Drawing.Size(108, 32)
         Me.fonctionTxt.TabIndex = 37
-        Me.fonctionTxt.Text = "3"
+        Me.fonctionTxt.Text = "0"
         '
         'montantTxt
         '
@@ -304,14 +291,14 @@ Partial Class Cotisation
         Me.arriereTxt.Name = "arriereTxt"
         Me.arriereTxt.Size = New System.Drawing.Size(108, 32)
         Me.arriereTxt.TabIndex = 35
-        Me.arriereTxt.Text = "10"
+        Me.arriereTxt.Text = "0"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(15, 98)
+        Me.Label2.Location = New System.Drawing.Point(13, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 24)
         Me.Label2.TabIndex = 30
@@ -350,6 +337,18 @@ Partial Class Cotisation
         Me.Label6.TabIndex = 33
         Me.Label6.Text = "Social"
         '
+        'suiviBtn
+        '
+        Me.suiviBtn.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.suiviBtn.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.suiviBtn.ForeColor = System.Drawing.Color.Black
+        Me.suiviBtn.Location = New System.Drawing.Point(200, 208)
+        Me.suiviBtn.Name = "suiviBtn"
+        Me.suiviBtn.Size = New System.Drawing.Size(198, 55)
+        Me.suiviBtn.TabIndex = 48
+        Me.suiviBtn.Text = "Fiche de suivi"
+        Me.suiviBtn.UseVisualStyleBackColor = False
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -373,6 +372,72 @@ Partial Class Cotisation
         Me.GroupBox2.TabIndex = 49
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Last Cotisation"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(372, 146)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(48, 24)
+        Me.Label11.TabIndex = 54
+        Me.Label11.Text = "Code"
+        '
+        'amendeCo
+        '
+        Me.amendeCo.AutoSize = True
+        Me.amendeCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.amendeCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.amendeCo.Location = New System.Drawing.Point(372, 86)
+        Me.amendeCo.Name = "amendeCo"
+        Me.amendeCo.Size = New System.Drawing.Size(40, 24)
+        Me.amendeCo.TabIndex = 53
+        Me.amendeCo.Text = "xxx"
+        '
+        'dateCo
+        '
+        Me.dateCo.AutoSize = True
+        Me.dateCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.dateCo.Location = New System.Drawing.Point(372, 40)
+        Me.dateCo.Name = "dateCo"
+        Me.dateCo.Size = New System.Drawing.Size(40, 24)
+        Me.dateCo.TabIndex = 52
+        Me.dateCo.Text = "xxx"
+        '
+        'socialCo
+        '
+        Me.socialCo.AutoSize = True
+        Me.socialCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.socialCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.socialCo.Location = New System.Drawing.Point(113, 143)
+        Me.socialCo.Name = "socialCo"
+        Me.socialCo.Size = New System.Drawing.Size(40, 24)
+        Me.socialCo.TabIndex = 51
+        Me.socialCo.Text = "xxx"
+        '
+        'montantCo
+        '
+        Me.montantCo.AutoSize = True
+        Me.montantCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.montantCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.montantCo.Location = New System.Drawing.Point(113, 90)
+        Me.montantCo.Name = "montantCo"
+        Me.montantCo.Size = New System.Drawing.Size(40, 24)
+        Me.montantCo.TabIndex = 50
+        Me.montantCo.Text = "xxx"
+        '
+        'codeCo
+        '
+        Me.codeCo.AutoSize = True
+        Me.codeCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.codeCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.codeCo.Location = New System.Drawing.Point(113, 40)
+        Me.codeCo.Name = "codeCo"
+        Me.codeCo.Size = New System.Drawing.Size(40, 24)
+        Me.codeCo.TabIndex = 49
+        Me.codeCo.Text = "xxx"
         '
         'Label14
         '
@@ -439,72 +504,6 @@ Partial Class Cotisation
         Me.Label19.Size = New System.Drawing.Size(108, 24)
         Me.Label19.TabIndex = 33
         Me.Label19.Text = "Observation"
-        '
-        'codeCo
-        '
-        Me.codeCo.AutoSize = True
-        Me.codeCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.codeCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.codeCo.Location = New System.Drawing.Point(113, 40)
-        Me.codeCo.Name = "codeCo"
-        Me.codeCo.Size = New System.Drawing.Size(40, 24)
-        Me.codeCo.TabIndex = 49
-        Me.codeCo.Text = "xxx"
-        '
-        'montantCo
-        '
-        Me.montantCo.AutoSize = True
-        Me.montantCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.montantCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.montantCo.Location = New System.Drawing.Point(113, 90)
-        Me.montantCo.Name = "montantCo"
-        Me.montantCo.Size = New System.Drawing.Size(40, 24)
-        Me.montantCo.TabIndex = 50
-        Me.montantCo.Text = "xxx"
-        '
-        'socialCo
-        '
-        Me.socialCo.AutoSize = True
-        Me.socialCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.socialCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.socialCo.Location = New System.Drawing.Point(113, 143)
-        Me.socialCo.Name = "socialCo"
-        Me.socialCo.Size = New System.Drawing.Size(40, 24)
-        Me.socialCo.TabIndex = 51
-        Me.socialCo.Text = "xxx"
-        '
-        'dateCo
-        '
-        Me.dateCo.AutoSize = True
-        Me.dateCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.dateCo.Location = New System.Drawing.Point(372, 40)
-        Me.dateCo.Name = "dateCo"
-        Me.dateCo.Size = New System.Drawing.Size(40, 24)
-        Me.dateCo.TabIndex = 52
-        Me.dateCo.Text = "xxx"
-        '
-        'amendeCo
-        '
-        Me.amendeCo.AutoSize = True
-        Me.amendeCo.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.amendeCo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.amendeCo.Location = New System.Drawing.Point(372, 86)
-        Me.amendeCo.Name = "amendeCo"
-        Me.amendeCo.Size = New System.Drawing.Size(40, 24)
-        Me.amendeCo.TabIndex = 53
-        Me.amendeCo.Text = "xxx"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(372, 146)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(48, 24)
-        Me.Label11.TabIndex = 54
-        Me.Label11.Text = "Code"
         '
         'Cotisation
         '
